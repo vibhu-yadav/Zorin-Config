@@ -1,0 +1,21 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/nvme0n1p10 during installation
+UUID=5c32197e-065a-43fc-b2ef-269ddec82c94 /               ext4    errors=remount-ro 0       1
+# /boot was on /dev/nvme0n1p9 during installation
+UUID=e3d1779f-51ab-4884-8264-0f7a68501815 /boot           ext4    defaults        0       2
+# /boot/efi was on /dev/nvme0n1p1 during installation
+UUID=AC5D-352B  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/nvme0n1p5 during installation
+UUID=46031a99-e75e-4ca9-beb1-fe5e6a704f8d none            swap    sw              0       0
+# Local Disk D mounted
+/dev/disk/by-uuid/DCB86758B8672FE6 /mnt/Local_Disk_D auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Local%20Disk%20D,x-gvfs-icon=D,x-gvfs-symbolic-icon=D 0 0
+# Local Disk E mounted
+/dev/disk/by-uuid/3A2471042470C503 /mnt/Local_Disk_E auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Local%20Disk%20E,x-gvfs-icon=E,x-gvfs-symbolic-icon=E 0 0
+# Local Disk F mounted
+/dev/disk/by-uuid/0ECE7CBECE7CA01F /mnt/Local_Disk_F auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Local%20Disk%20F,x-gvfs-icon=F,x-gvfs-symbolic-icon=F 0 0
